@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular troco</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+            text-align: center;
+        }
+
+        input {
+            height: 70px;
+            width: 170px;
+            background-color: crimson;
+            color: white;
+            border: 0px;
+            border-radius: 15px;
+            font-size: 1em;
+            font-weight: bolder;
+        }
+        input:hover {
+            background-color: rgb(185, 16, 50);
+            transition: .5s;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculando Troco</h1>
+    <input type="button" value="Comprar Produto" onclick="comprar()">
+
+    <script>        
+
+        function emReais(valor) {
+            return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+        
+        function comprar(){ 
+        const prod = prompt('Que produto você está comprando? ')
+        const val = Number(prompt(`Quanto custa o(a) ${prod} que você está comprando?`))
+        const cap = Number(prompt(`Qual foi o valor que você deu para pagar o(a) ${prod}?`))
+
+        let troco = cap - val
+        let rest = val - cap
+            
+
+            if (cap >= val) {
+            window.alert(`Você comprou o(a) ${prod} que custou ${emReais(val)}. Deu ${emReais(cap)} em dinheiro e vai receber ${emReais(troco)} de troco.
+            Volte Sempre!`);
+            }  else {
+            window.alert(`O valor do(a) ${prod} é maior que o valor que você tem, Você precisa dar mais ${emReais(rest)} Para concluir a compra;`);
+            }
+            
+        }
+
+    
+        
+    </script>
+    
+</body>
+</html>

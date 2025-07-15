@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucessor e Antecessor</title>
+    <style>
+        body {
+            font: normal 1em Arial;
+            text-align: center;
+        }
+        input {
+            height: 60px;
+            background-color: brown;
+            color: white;
+            border: 0px;
+            border-radius: 15px;
+        }
+        
+        input:hover {
+            background-color: rgb(107, 25, 25);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antecessor e Sucessor</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="verificar()">
+
+    <script>
+        function verificar() {
+            var n1 = Number(window.prompt('Digite um número inteiro qualquer'))
+            var n2 = Number(n1 + 1)
+            var n3 = Number(n1 - 1)
+
+            window.alert(`Antes do ${n1}, temos o ${n3}. Depois do ${n1}, temos o ${n2}`)
+        }
+    </script>
+
+    
+</body>
+</html>
