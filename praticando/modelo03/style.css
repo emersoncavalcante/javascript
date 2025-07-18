@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(84, 178, 240);
+    
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+main {
+    width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.582);
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
